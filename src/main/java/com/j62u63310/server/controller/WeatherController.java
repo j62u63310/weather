@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Validated
 @RestController
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class WeatherController {
 
     @Autowired
