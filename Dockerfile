@@ -7,6 +7,6 @@ RUN mvn clean package -DskipTests && ls -l /app/target
 # 打包阶段
 FROM openjdk:17.0.2-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /app/target/server-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","demo.jar"]
