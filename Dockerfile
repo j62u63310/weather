@@ -4,7 +4,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # 打包阶段
-FROM openjdk:11-jdk-slim
+FROM openjdk:17-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
