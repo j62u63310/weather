@@ -2,7 +2,7 @@
 FROM maven:3.8.2-openjdk-17 AS build
 WORKDIR /app
 COPY . .
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests && ls -l /app/target
 
 # 打包阶段
 FROM openjdk:17.0.2-jdk-slim
