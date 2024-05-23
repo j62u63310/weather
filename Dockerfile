@@ -1,5 +1,5 @@
 # 构建阶段
-FROM maven:3.8.2-jdk-11 AS build
+FROM maven:3.8.2-openjdk-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
